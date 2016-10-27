@@ -14,7 +14,7 @@
 	<model>
 		<path>Aircraft/CamaroSS16/Models/CamaroSS16.xml</path>
 	<livery>
-      <file type="string"/>
+      <file type="string">BaseColor</file>
     </livery>
 	</model> 
 <sound>
@@ -102,6 +102,21 @@
 <float n="8" alias="/controls/gear/brake-parking"/>
 </generic>
 	</multiplay>
+<menubar>
+    <default>
+      <menu n="100">
+        <label>BulldogRS</label>
+        <enabled type="bool">true</enabled>
+        <item>
+          <label>Select Livery</label>
+          <binding>
+            <command>nasal</command>
+            <script>aircraft.livery.dialog.open();</script>
+          </binding>
+        </item>
+      </menu>
+    </default>
+  </menubar>
 </sim>
 
 <engines>

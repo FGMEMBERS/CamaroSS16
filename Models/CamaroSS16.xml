@@ -1,6 +1,32 @@
 <PropertyList>
+<nasal>
+  <load>
+    <!--
+      ##############################################################################
+      # The on-load Nasal is not executed when this file is loaded as the user
+      # aircraft. The code is only executed if the file is loaded for a remote
+      # aircraft in Multi-Player mode (MP)
+      ##############################################################################
+    -->
+    <![CDATA[
+      var livery_update = aircraft.livery_update.new("Aircraft/CamaroSS16/Models/Liveries");
+    ]]>
+    </load>
+  
+  <unload><![CDATA[
+    livery_update.stop();
+  ]]></unload>
+</nasal>
 <path>CamaroSS16.ac</path>
 <!-- ========== Effects ========= -->
+<animation>
+  <type>material</type>
+  <object-name>CamSS-RS3-Body</object-name>
+  <object-name>D1</object-name>
+  <property-base>sim/model/livery</property-base>
+  <texture-prop>texture</texture-prop>
+  <texture>Liveries/BaseColor.png</texture>
+</animation>
 <effect>
  <inherits-from>Effects/glass</inherits-from>
  <object-name>CamSS-RS3-Windows</object-name>
