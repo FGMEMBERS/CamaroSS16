@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<PropertyList>
+<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
 <sim>
 
 	<description>2016 Camaro SS</description>
